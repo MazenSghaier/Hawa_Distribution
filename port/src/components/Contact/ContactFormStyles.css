@@ -1,0 +1,55 @@
+.from-container{
+    margin : 4rem 6rem;
+    justify-content: space-between;
+    color: #2a2a2a;
+    border:1px solid #e1e1e1;
+}
+.from-container h1{
+    padding: 2rem;
+    text-align: center;
+}
+
+.from-container form{
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    width:65%;
+    margin: auto;
+    align-items:center;
+
+}
+
+.from-container input{
+    width:100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: .3rem;
+    border: 1px solid #e1e1e1;
+}
+
+.from-container textarea{
+    width:100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: .3rem;
+    border: 1px solid #e1e1e1;
+}
+
+.from-container button{
+    display: inline;
+
+}
+
+@media screen and (max-width:850px) {
+    .from-container{
+        margin: 4rem 6rem;
+        color: #2a2a2a;
+    }
+
+    .from-container form{
+        padding-top: 3rem;
+        width:90%;
+    }
+}

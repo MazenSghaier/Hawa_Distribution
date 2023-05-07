@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+:root{
+    --main-color:#0b76c8;
+    --black:#222;
+    --white:rgb(255, 255, 255);
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --light-bg:#eee;
+    --border:.1rem solid var(--black);
+    --light-co:#19db91;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --box-text:0 1.5rem 3rem rgba(0,0,0,.3);
+    --blue:#0b76c8;
+}
+
+.slider-content {
+    text-align: center;
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 55rem;
+    transition: all 0.5s ease-in-out;
+    
+  }
+
+.slider-content span{
+    display:block;
+    font-size:2.2rem ;
+    color:var(--light-white);
+    padding-bottom: 1rem;
+    animation: fadeIn .2s linear backwards .2s;
+}
+.slider-content h3{
+    font-size:2vw ;
+    color:var(--white);
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: var(--text-shadow);
+    padding:1rem 0;
+    animation: fadeIn .2s linear backwards .4s;
+}
+.slider-content img {
+    
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+  
+.prev-button, .next-button {
+    padding: 10px 20px;
+    height: 9rem;
+    width: 9rem;
+    color: var(--black);
+    border: none;
+    cursor: pointer;
+  }
+  
+.prev-button:hover, .next-button:hover {
+    background: var(--main-color);
+    color: var(--white);
+    font-size: 2rem; 
+}
+  
+.dots-container {
+    display:inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding:0;
+    
+}
+  
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+.dot.active {
+    background-color: #fff;
+}
+
+.prev-button:hover + .slider-content img {
+    transform: translateX(-100%);
+}
+  
+.next-button:hover + .slider-content img {
+    transform: translateX(100%);
+}
+  
+
+.slider-container {
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      ". ."
+      ". ."
+      ". .";
+      width: 100%;
+    height: 500px;
+  }
+  
+  @media (min-width: 600px) {
+    .slider-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        ". ."
+        ". .";
+    }
+  }
+  

@@ -1,0 +1,47 @@
+.image-card-container {
+  display: flex;
+  padding-bottom: 3rem;
+}
+
+.image-card {
+  flex: 1;
+  margin: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.image-card img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.image-card-content {
+  padding: 10px 0;
+}
+
+.image-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.image-card-description {
+  color: gray;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  .image-card-container {
+      flex-wrap: wrap;
+      display: block;
+  }
+  .image-card {
+      width: 100%;
+  }
+  .image-card img {
+      width: 100%;
+      height: auto;
+  }
+}
